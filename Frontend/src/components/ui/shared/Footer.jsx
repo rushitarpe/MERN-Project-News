@@ -82,7 +82,7 @@ function Footer() {
       </div>
 
       <p className="mt-4">
-        &copy; {new Date().getFullYear()} Morning Dispatch. All rights
+        &copy; {new Date().getFullYear()} LOCAL BUZZ. All rights
         reserved.
       </p>
     </div>
