@@ -12,6 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { signOutSuccess } from "@/redux/user/userSlice"
+import SearchBar from "./Extra/SearchBar"
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -51,16 +52,16 @@ const Header = () => {
     }
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
 
-    const urlParams = new URLSearchParams(location.search)
-    urlParams.set("searchTerm", searchTerm)
+  //   const urlParams = new URLSearchParams(location.search)
+  //   urlParams.set("searchTerm", searchTerm)
 
-    const searchQuery = urlParams.toString()
+  //   const searchQuery = urlParams.toString()
 
-    navigate(`/search?${searchQuery}`)
-  }
+  //   navigate(`/search?${searchQuery}`)
+  // }
 
   return (
     <header className="shadow-lg sticky">
@@ -71,8 +72,8 @@ const Header = () => {
             <span className="text-slate-900">BUZZ</span>
           </h1>
         </Link>
-
-        <form
+          <SearchBar />
+        {/* <form
           className="p-3 bg-slate-100 rounded-lg flex items-center"
           onSubmit={handleSubmit}
         >
@@ -83,13 +84,12 @@ const Header = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-
           <button type="submit" aria-label="Search">
             <FaSearch className="text-slate-600 hover:text-slate-800 transition duration-200" />
           </button>
-        </form>
+        </form> */}
 
-        <ul className="flex gap-4">
+        <ul className="flex gap-4 space-x-3 items-center">
           <Link to={"/"}>
             <li className="hidden lg:inline text-slate-700 hover:underline">
               Home

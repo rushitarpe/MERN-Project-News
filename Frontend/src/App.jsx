@@ -11,6 +11,8 @@ import Header from './components/ui/shared/Header'
 import { Toaster } from './components/ui/toaster'
 import Footer from './components/ui/shared/Footer'
 import PrivateRoute from './components/ui/shared/PrivateRoute'
+import CreatePost from './pages/CreatePost'
+import AdminPrivateRoute from './components/ui/shared/AdminPrivateRoute'
 function App() {
   return (
     <div>
@@ -24,6 +26,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route element ={<PrivateRoute/>}>
         <Route path="/dashboard" element={<Dashboard />} />
+        </Route>
+        <Route element ={<AdminPrivateRoute />}>
+        <Route path="/create-post" element={<CreatePost />} />
         </Route>
         </Routes>
         <Footer/>
