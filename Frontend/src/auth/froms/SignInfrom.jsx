@@ -55,8 +55,8 @@ const SignInfrom = () => {
         dispatch(signInFailure(data.message))
       }
      if(res.ok){
+       toast({title:"Sign In Successful..! "})
       dispatch(signInSuccess(data))
-      toast({title:"Sign In Successful..! "})
       navigate("/")
       
      }

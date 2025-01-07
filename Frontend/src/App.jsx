@@ -10,6 +10,7 @@ import NewsArtical from './pages/NewsArtical'
 import Header from './components/ui/shared/Header'
 import { Toaster } from './components/ui/toaster'
 import Footer from './components/ui/shared/Footer'
+import PrivateRoute from './components/ui/shared/PrivateRoute'
 function App() {
   return (
     <div>
@@ -21,7 +22,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<NewsArtical />} />
         <Route path="/about" element={<About />} />
+        <Route element ={<PrivateRoute/>}>
         <Route path="/dashboard" element={<Dashboard />} />
+        </Route>
         </Routes>
         <Footer/>
         <Toaster />
