@@ -180,10 +180,6 @@ const CreatePost = () => {
     </form>
   </div>
   
-
-
-
-  
   )
 }
 
