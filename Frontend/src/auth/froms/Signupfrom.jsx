@@ -16,6 +16,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { useToast } from '@/hooks/use-toast'
 import './sign.css'
+import GoogleAuth from '@/components/ui/shared/GoogleAuth'
  
 const formSchema = z.object({
   username: z.string().min(2,{message:"Username must atleast 2 characters "}),
@@ -138,6 +139,7 @@ const Signupfrom = () => {
             <span> Sign Up</span>
           )
          }</Button>
+         <GoogleAuth />
       </form>
       </Form>
       <div className='flex gap-2 text-sm mt-5'>

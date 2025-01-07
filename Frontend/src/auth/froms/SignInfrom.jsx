@@ -18,6 +18,7 @@ import { useToast } from '@/hooks/use-toast'
 import './sign.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { signInFailure, signInStart, signInSuccess } from '@/redux/user/userSlice'
+import GoogleAuth from '@/components/ui/shared/GoogleAuth'
  
 const formSchema = z.object({
   email: z.string().min({message:"Invalid Email address "}),
@@ -125,6 +126,7 @@ const SignInfrom = () => {
             <span> Sign In</span>
           )
          }</Button>
+         <GoogleAuth />
       </form>
       </Form>
       <div className='flex gap-2 text-sm mt-5'>
